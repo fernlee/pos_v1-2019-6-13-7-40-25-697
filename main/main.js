@@ -12,7 +12,6 @@ function getCountedItems(tags) {
     }, {});
 }
 
-//TODO: 请在该文件中实现练习要求并删除此注释
 function printReceipt(tags) {
     const countedItems = getCountedItems(tags);
 
@@ -25,7 +24,6 @@ function printReceipt(tags) {
             if (promotion.type === 'BUY_TWO_GET_ONE_FREE') {
                 promotion.barcodes.forEach(promotionBarcode => {
                     if (promotionBarcode === boughtIem.barcode && boughtIem.quantity > 2) {
-                        // boughtIem.computedQuantity = boughtIem.quantity - boughtIem.quantity/3;
                         boughtIem.computedQuantity = boughtIem.quantity;
                         boughtIem.computedQuantity--;
                     }
